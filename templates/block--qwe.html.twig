@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="faculty" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #8da0a5;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 80%;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  margin: 10px 134px;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+
+</style>
+</head>
+<body>
+
+<button class="accordion">BBA</button>
+<div class="panel">
+ <table class="table table-hover" width="100%">
+    <tbody><tr>
+    <td colspan="3" align="center" style="text-align:center;vertical-align:middle;font-size:14px;background-color:#205736;color:#fff">BBA</td>
+  </tr>
+  <tr>
+    <td width="35%" align="center">Staff Name</td>
+    <td width="30%" align="center">Designation </td>
+    <td width="30%" align="center">Department </td>
+  </tr>
+  <tr>
+          <td><a onclick="StaffDetails(1)" style="cursor:pointer; text-transform:uppercase;">Mr. P. RAJAN</a></td>
+    <td align="center">Head Of The Department</td>
+    <td align="center">BBA</td>
+  </tr>
+      <tr><td><a onclick="StaffDetails(2)" style="cursor:pointer; text-transform:uppercase;"><a onclick="StaffDetails(2)" style="cursor:pointer; text-transform:uppercase;" id="myBtn1">Mrs. K. GEETHA</a></a></td>
+    <td align="center">Assistant Professor</td>
+    <td align="center">BBA</td>
+  </tr>
+      <tr><td><a onclick="StaffDetails(3)" style="cursor:pointer; text-transform:uppercase;">Mrs. S. MAHALAKSHMI</a></td>
+    <td align="center">Assistant Professor</td>
+    <td align="center">BBA</td>
+  </tr>
+      <tr><td ><a onclick="StaffDetails(4)" style="cursor:pointer; text-transform:uppercase;">Mrs. J. MARY SARANYA</a></td>
+    <td align="center">Assistant Professor</td>
+    <td align="center">BBA</td>
+  </tr>
+      <tr><td><a onclick="StaffDetails(5)" style="cursor:pointer; text-transform:uppercase;">Mrs. P. NIRMALA SHINY</a></td>
+    <td align="center">Assistant Professor</td>
+    <td align="center">BBA</td>
+  </tr>
+      <tr><td><a onclick="StaffDetails(6)" style="cursor:pointer; text-transform:uppercase;">Mr. C. BALAJI VISWANATH</a></td>
+    <td align="center">Assistant Professor</td>
+    <td align="center">BBA</td>
+  </tr>
+      <tr><td><a onclick="StaffDetails(7)" style="cursor:pointer; text-transform:uppercase;">Mrs. S. SUVARNA</a></td>
+    <td align="center">Assistant Professor</td>
+    <td align="center">BBA</td>
+  </tr>
+      <tr><td><a onclick="StaffDetails(183)" style="cursor:pointer; text-transform:uppercase;">Geetha K</a></td>
+    <td align="center">Assistant Professor</td>
+    <td align="center">BBA</td>
+  </tr>
+      <tr><td><a onclick="StaffDetails(265)" style="cursor:pointer; text-transform:uppercase;">Sarulatha K</a></td>
+    <td align="center">Assistant Professor</td>
+    <td align="center">BBA</td>
+  </tr>
+      <tr><td><a onclick="StaffDetails(386)" style="cursor:pointer; text-transform:uppercase;">Ms.C.Tharani</a></td>
+    <td align="center">Assistant Professor</td>
+    <td align="center">BBA</td>
+  </tr>
+    <tr>
+    <td align="center">&nbsp;</td>
+    <td align="center" style="font-weight:bold;"></td>
+    <td align="center" style="font-weight:bold;"></td>
+  </tr>
+</tbody></table>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="staffid">
+
+<div><p align="center" style="padding-bottom:5px;padding-top:5px;">
+<img src="http://skasc.ac.in/staff/2.jpg"></p></div>
+
+
+<h1 align="center">Mrs. K. GEETHA</h1>
+
+<h1 align="center">MBA.,M.Phil.,(Ph.D)</h1>
+
+<h2 align="center">Assistant Professor</h2>
+
+
+
+<table style="margin:auto;border:1px solid #999;margin-bottom:5px;" width="80%">
+
+  <tbody><tr align="center" style="border:1px solid #999">
+
+    <td width="33.33%" align="center" style="border:1px solid #999;vertical-align:middle">Email </td>
+
+    <td width="66.66%" align="left" style="padding-left:5px;" colspan="2">geethak@skasc.ac.in</td>
+
+  </tr>
+
+  <tr style="border:1px solid #999">
+
+    <td align="center" style="border:1px solid #999;vertical-align:middle">Experience</td>
+
+    <td align="left" style="padding-left:5px;" colspan="2">6.2</td>
+
+  </tr>
+
+  <tr>
+
+    <th colspan="3" style="text-align:center" valign="middle">Publications</th>
+
+    
+
+  </tr>
+
+  <tr style="border:1px solid #999">
+
+    <td align="center" style="border:1px solid #999;vertical-align:middle" rowspan="2">National</td>
+
+    <td align="center" style="padding-left:5px;border:1px solid #999;vertical-align:middle">Journals</td>
+
+    <td align="center" style="padding-left:5px;">Conference</td>
+
+  </tr>
+
+ <tr style="border:1px solid #999">
+
+    <td style="padding-left:5px;border:1px solid #999;vertical-align:middle" align="center">1</td>
+
+    <td style="padding-left:5px;border:1px solid #999;vertical-align:middle" align="center">10</td>
+
+  </tr>
+
+  <tr style="border:1px solid #999">
+
+    <td align="center" style="border:1px solid #999;vertical-align:middle"> InterNational</td>
+
+    <td style="border:1px solid #999;vertical-align:middle" align="center">2</td>
+
+    <td align="center">7</td>
+
+  </tr>
+
+</tbody></table>
+
+</div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn1");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+

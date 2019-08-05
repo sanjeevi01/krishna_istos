@@ -1,0 +1,106 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Bartik's theme implementation for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{# {% set attributes = attributes.addClass('site-branding') %}
+{% block content %}
+<div class=row>
+  {% if site_logo %}
+    <div class="brand logo">
+    <div class="col-lg-3">
+      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-branding__logo">
+        <img src="{{ site_logo }}" alt="{{ 'Home'|t }}"style=" height: 100px; width: 100px;"/>
+      </a>
+    </div>
+    </div>
+  {% endif %}
+  {% if site_name or site_slogan %}
+    <div class="brand site-name">
+      {% if site_name %}
+        <div class="site-branding__name">
+          <div class="col-lg-6">
+            <a style=" font-size: 28px; font-weight: 600; font-family: sans-serif;"><center>SRI KRISHNA COLLEGE OF ARTS AND SCIENCE COLLEGE <br><a>
+              <a style=" font-size: 24px; font-family: serif; ">(An Antonomous Institution)<br>
+              Affilitated to Bharathiar University,Coimbatore<br>
+              Re-Accredited by NAAC with 'A' grade</center><a>
+            </div>
+          {# <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a> #}
+          {# <div class= "col-lg-3">
+           <a href="#"><img  style="background:white; width:150px" src="{{directory}}/images/main_logo2.png"></a>
+          </div>
+        </div>
+      {% endif %}   
+      {% if site_slogan %}
+        <div class="site-branding__slogan">{{ site_slogan }}</div>
+      {% endif %}
+    </div>
+    </div>
+  {% endif %}
+{% endblock %} #}
+
+{% set attributes = attributes.addClass('site-branding') %}
+{% block content %}
+<div class=row>
+      <div class="col-lg-2 col-sm-2" >
+              {% if site_logo %}
+                <div class="brand logo">
+                  <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-branding__logo">
+                    <img src="{{directory}}/images/main_logo.png" alt="{{ 'Home'|t }}"style="    background: white; padding: 5px; height: 100px; width: 100px;"/>
+                  </a>
+                </div>
+              {% endif %}
+      </div>
+          {% if site_name or site_slogan %}
+            <div>
+              {% if site_name %}
+               <div>
+                    <div class="col-lg-8 col-sm-8 site">
+                      <a style=" font-size: 25px; font-weight: 600; font-family: sans-serif;color: white;     text-decoration: none;"><center>SRI KRISHNA COLLEGE OF ARTS AND SCIENCE COLLEGE <br><a>
+                      <a style=" font-size: 16px; font-family: sans-serif;    line-height: 150% ;color: white;     text-decoration: none;">( An Antonomous Institution )<br>
+                      Affilitated to Bharathiar University,Coimbatore<br>
+                      Re-Accredited by NAAC with 'A' grade</center><a>
+                    </div>
+                    <div class="col-lg-2 col-sm-2 brand_logo">
+                      <a href="#"><img  style=" height: 100px; width:100px" src="{{directory}}/images/main_logo2.png"></a>
+                    </div>
+             {% endif %} 
+           </div>
+              {% if site_slogan %}
+                  <div class="site-branding__slogan">{{ site_slogan }}</div>
+              {% endif %}
+          {% endif %}
+</div>
+{% endblock %}
+
+
+
+{# <div class=row>
+    <div class="col-lg-2 col-sm-2 brand logo">
+        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-branding__logo">
+          <img src="{{directory}}/images/main_logo2.png">
+        </a>
+    </div>
+    <div class="col-lg-8 col-sm-8 brand  site-name  site-branding__name">
+        <a><center>SRI KRISHNA COLLEGE OF ARTS AND SCIENCE COLLEGE <br></a>
+        <a> ( An Antonomous Institution ) <br>
+            Affilitated to Bharathiar University,Coimbatore<br>
+            Re-Accredited by NAAC with 'A' grade</center>
+        </a>
+    </div>
+    <div class="col-lg-2 col-sm-2">
+        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-branding__logo"> 
+          <img src="{{directory}}/images/main_logo2.png">
+        </a>
+    </div>
+</div> #}
