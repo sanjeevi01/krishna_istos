@@ -22,17 +22,17 @@ use Drupal\file\Plugin\Core\Entity\FileInterface;
 function krishna_istos_preprocess_page(&$variables) {
 
   // Add Responsive class for Top Widget.
-  if (!empty($variables['page']['topwidget_first']) && !empty($variables['page']['topwidget_second']) && !empty($variables['page']['topwidget_third'])) {
-    $variables['topwidget_class'] = 'col-md-4';
-    $variables['topwidget_third_class'] = 'col-md-4';
-  }
-  elseif((!empty($variables['page']['topwidget_first']) && !empty($variables['page']['topwidget_second'])) or (!empty($variables['page']['topwidget_first']) && !empty($variables['page']['topwidget_third'])) or (!empty($variables['page']['topwidget_third']) && !empty($variables['page']['topwidget_second']))) {
-    $variables['topwidget_class'] = 'col-md-6';
-    $variables['topwidget_third_class'] = 'col-md-6';
-  }
-  else {
-    $variables['topwidget_class'] = 'col-md-12';
-  }
+  // if (!empty($variables['page']['topwidget_first']) && !empty($variables['page']['topwidget_second']) && !empty($variables['page']['topwidget_third'])) {
+  //   $variables['topwidget_class'] = 'col-md-4';
+  //   $variables['topwidget_third_class'] = 'col-md-4';
+  // }
+  // elseif((!empty($variables['page']['topwidget_first']) && !empty($variables['page']['topwidget_second'])) or (!empty($variables['page']['topwidget_first']) && !empty($variables['page']['topwidget_third'])) or (!empty($variables['page']['topwidget_third']) && !empty($variables['page']['topwidget_second']))) {
+  //   $variables['topwidget_class'] = 'col-md-6';
+  //   $variables['topwidget_third_class'] = 'col-md-6';
+  // }
+  // else {
+  //   $variables['topwidget_class'] = 'col-md-12';
+  // }
 
   // Add Responsive class for Middle Widget.
   if (!empty($variables['page']['middle_first']) && !empty($variables['page']['middle_second']) && !empty($variables['page']['middle_third'])) {

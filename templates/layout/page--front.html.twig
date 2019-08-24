@@ -239,6 +239,9 @@
 <!-- Start Middle Widget -->
 {% if page.middle_first or page.middle_second or page.middle_third %}
   <div class="middlewidget">
+  <div class="hed">
+  <h2> MANAGEMENT</h2>
+  </div>
     <!-- start: Container -->
     {# <div class="container"> #}
       
@@ -278,16 +281,24 @@
 <!--End Top Widget -->
 
   <div class="row newsbg" >
+      <div class="hed-p">
+       <h2> News of SKASC</h2>
+      </div>
      {% if page.news %}
           {{ page.news }}
     {% endif %}
-    </div>
+  </div>
 
+    <div class="container" style="border-top: 4px solid #dce110; margin-top: 34px;">
+    </div>
     
     {% if page.placement_company %}
-      <div class="row" style="background: #f7f5ee; padding-bottom: 40px;">
+      <div class="row placementc">
           {{ page.placement_company }}
     {% endif %}
+    </div>
+
+    <div class="container" style="border-top: 5px solid #dce110; margin-top: 34px;">
     </div>
 
 <!-- Start bottom -->

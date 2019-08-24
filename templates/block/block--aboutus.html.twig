@@ -1,0 +1,63 @@
+
+            <div class="container line2">
+                <div class="hed1">
+                    <h2>ABOUT US</h2>      
+                </div>
+                <div class="row us1">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-img">
+						<div class="slideshow-container">
+
+							<div class="mySlides fade1">
+							<img src="{{directory}}/images/skasc-welcome-left.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides fade1">
+							<img src="{{directory}}/images/welcome_bg.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides fade1">
+							<img src="{{directory}}/images/welcome1.jpg" style="width:100%">
+							</div>
+
+							</div>
+
+<div style="text-align:center">
+  <span class="dot1"></span> 
+  <span class="dot1"></span> 
+  <span class="dot1"></span> 
+</div>
+						</div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                    	<div class="about-desc">
+                		    <h3>WELCOME TO SKASC</h3>      
+                			<p>Sri Krishna Arts and Science College with a vision of "Fitness for Purpose" established in the year 1997 is an autonomous Institution imparting Quality Education imbibing scientific and artistic knowledge to the needs of the current generation. A College offering 32 Undergraduate Programmes 13 Post Graduate Programmes 7 Research Programmes and one Integrated Programme is re-accredited with ‘A’ Grade by the National Assessment and Accreditation Council (NAAC) and is a. From a student strength of 623 in the academic year 2004-2005 the college had grown extensively in infrastructure, technical developments and quality Faculty strength to incorporate 8500 in the year 20019-2020.</p>
+                    	</div>
+		           </div>
+						      
+						            </div>
+						        </div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot1");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>

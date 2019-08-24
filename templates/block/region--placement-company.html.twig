@@ -1,0 +1,51 @@
+
+<script src="{{directory}}/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="{{directory}}/js/slick.js"></script>
+<script src="{{directory}}/js/bootstrap.min.js"></script>
+<link href="{{directory}}/css/bootstrap.min.css" rel="stylesheet" />
+<div>
+<div class="hed3">
+<h2 >Placement Companies</h2>
+</div>
+
+<section class="customer-logos slider">
+<div class="slide"><img src="{{directory}}/images/amazon.jpg" /></div>
+
+<div class="slide"><img src="{{directory}}/images/aspire.jpg" /></div>
+
+<div class="slide"><img src="{{directory}}/images/ibm.jpg" /></div>
+
+<div class="slide"><img src="{{directory}}/images/codissia.jpg" /></div>
+
+<div class="slide"><img src="{{directory}}/images/cognizant.png" /></div>
+
+<div class="slide"><img src="{{directory}}/images/zifo.jpg" /></div>
+
+<div class="slide"><img src="{{directory}}/images/hdfc.jpg" /></div>
+
+<div class="slide"><img src="{{directory}}/images/hexaware.png" /></div>
+</section>
+</div>
+<script type="text/javascript">
+      $('.customer-logos').slick({
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+   
+  </script>

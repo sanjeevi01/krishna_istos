@@ -19,6 +19,17 @@ jQuery(document).ready(function($){
 	jQuery('.flexslider').flexslider({
     	animation: "slide"	
     });
+
+  //about tabs
+  $('.collapse.show').prev('.card-header').addClass('active');
+  $('#accordion, #bs-collapse, #accordion1')
+      .on('show.bs.collapse', function (a) {
+          $(a.target).prev('.card-header').addClass('active');
+      })
+      .on('hide.bs.collapse', function (a) {
+          $(a.target).prev('.card-header').removeClass('active');
+      });
+    
     
 });
 
